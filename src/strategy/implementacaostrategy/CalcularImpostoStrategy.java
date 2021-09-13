@@ -27,13 +27,14 @@ public class CalcularImpostoStrategy {
 
     /**
      * Para resolver esse problema de varios ifs é usado o padrão strategy, ele consiste em pegar cada if
-     * e converter-los classes separadas e generalizar a acao dos ifs por meio de polimorfismo
+     * e converter-los classes separadas e generalizar a acao dos ifs por meio de polimorfismo.
+     * Outro ponto importante é que temos um parametro que define qual seria o tipo de imposto
      *
      *
      *
      * @param orcamento orcamento a ser calculado
      * @param imposto imposto a ser aplicado
-     * @return
+     *
      */
     public BigDecimal calcularComStrategy (Orcamento orcamento, Imposto imposto){
 
