@@ -40,7 +40,7 @@ public class CalcularDescontoChainOfResponsability {
 
         return new CalcularDescontoPorQuantidade(
                 new CalcularDescontoPorValorOrcamento(new SemDesconto())).
-                calcularComChainOfResposability(orcamento);
+                calcularPatternTemplateMethod(orcamento);
 
     }
 }

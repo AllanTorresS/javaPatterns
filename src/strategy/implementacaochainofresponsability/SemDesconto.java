@@ -14,4 +14,9 @@ public class SemDesconto extends Desconto {
     public BigDecimal calcularComChainOfResposability(Orcamento orcamento) {
         return BigDecimal.ZERO;
     }
+
+    @Override
+    public Boolean deveAplicar(Orcamento orcamento) {
+        return true;
+    }
 }
