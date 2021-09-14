@@ -12,7 +12,15 @@ public abstract class Desconto {
     public Desconto (Desconto proximo){
         this.proximo = proximo;
     }
+    public  BigDecimal calcularPatternTemplateMethod (Orcamento orcamento){
+        if(deveAplicar(orcamento)){
+           return  calcularComChainOfResposability(orcamento);
+        }
+
+        return proximo.calcularPatternTemplateMethod(orcamento);
+    }
     public abstract BigDecimal calcularComChainOfResposability (Orcamento orcamento);
+    public abstract Boolean deveAplicar (Orcamento orcamento);
 
 
 }

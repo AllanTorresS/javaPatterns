@@ -14,10 +14,11 @@ public class CalcularDescontoPorQuantidade extends  Desconto{
 
     @Override
     public BigDecimal calcularComChainOfResposability(Orcamento orcamento) {
-        if(orcamento.getQuantidade() > 5 ){
             return orcamento.getValor().multiply(new BigDecimal("0.1"));
-        }
-        return proximo.calcularComChainOfResposability(orcamento);
+    }
 
+    @Override
+    public Boolean deveAplicar(Orcamento orcamento) {
+        return orcamento.getQuantidade() > 5;
     }
 }
