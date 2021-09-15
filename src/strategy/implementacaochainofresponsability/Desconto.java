@@ -12,6 +12,15 @@ public abstract class Desconto {
     public Desconto (Desconto proximo){
         this.proximo = proximo;
     }
+
+    /**
+     * calcularPatternTemplateMethod faz uso do padrão template method
+     *
+     * Define o esqueleto de um algoritmo na superclasse mas
+     * deixa as subclasses sobrescreverem etapas específicas do algoritmo sem modificar sua estrutura.
+     * @param orcamento
+     * @return
+     */
     public  BigDecimal calcularPatternTemplateMethod (Orcamento orcamento){
         if(deveAplicar(orcamento)){
            return  calcularComChainOfResposability(orcamento);
